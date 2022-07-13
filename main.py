@@ -1,7 +1,9 @@
+from logging import _Level
 import pygame
 import os
 import random
 import time
+pygame.font.init()
 
 #declarando a LARGURA DO DISPLAY em uma constante 
 WIDTH, HEIGHT = 750, 750
@@ -32,6 +34,10 @@ BG = pygame.transform.scale(pygame.image.load(os.path.join("assets","background-
 def main():
     run = True
     FPS = 60
+    level = 1
+    life = 5
+    main_font = pygame.font.SysFont("comicsans", 50)
+    
     clock = pygame.time.Clock()
     
     # estabilazndo o plano de fundo "backgroud" no eixo que fique parado___i
