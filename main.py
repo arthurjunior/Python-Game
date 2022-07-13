@@ -26,7 +26,7 @@ BLUE_SPACE_LASER = pygame.image.load(os.path.join("assets","pixel_laser_blue.png
 YELLOW_SPACE_LASER = pygame.image.load(os.path.join("assets","pixel_laser_yellow.png"))
 
 #BACKGROUD
-BG = pygame.image.load(os.path.join("assets","background-black.png"))
+BG = pygame.transform.scale(pygame.image.load(os.path.join("assets","background-black.png")),(WIDTH, HEIGHT))
 
 #Looping de verificação de de quadros "FPS" e opção de sair
 def main():
