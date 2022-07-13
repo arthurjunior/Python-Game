@@ -31,7 +31,8 @@ BG = pygame.image.load(os.path.join("assets","background-black.png"))
 #Looping de verificação de de quadros "FPS" e opção de sair
 def main():
     run = True
-    FPS = pygame.time.Clock()
+    FPS = 60
+    clock = pygame.time.Clock()
     
     # estabilazndo o plano de fundo "backgroud" no eixo que fique parado___i
     def redraw_window():
