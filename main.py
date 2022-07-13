@@ -28,3 +28,17 @@ YELLOW_SPACE_LASER = pygame.image.load(os.path.join("assets","pixel_laser_yellow
 #BACKGROUD
 BG = pygame.image.load(os.path.join("assets","background-black.png"))
 
+#Looping de verificação de de quadros "FPS" e opção de sair
+def main():
+    run = True
+    FPS = pygame.time.Clock()
+    
+    while run:
+        clock.tick(FPS)
+        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                
+main()                
+                
