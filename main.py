@@ -31,6 +31,7 @@ YELLOW_SPACE_LASER = pygame.image.load(os.path.join("assets","pixel_laser_yellow
 BG = pygame.transform.scale(pygame.image.load(os.path.join("assets","background-black.png")),(WIDTH, HEIGHT))
 
 #Looping de verificação de de quadros "FPS" e opção de sair
+#declarando variais do game
 def main():
     run = True
     FPS = 60
@@ -40,7 +41,7 @@ def main():
     
     clock = pygame.time.Clock()
     
-    # estabilazndo o plano de fundo "backgroud" no eixo que fique parado___i
+    # estabilazndo o plano de fundo "backgroud" no eixo que fique estatico___i
     def redraw_window():
         WIN.blit(BG, (0,0))
         
