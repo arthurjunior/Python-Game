@@ -44,6 +44,12 @@ def main():
     # estabilazndo o plano de fundo "backgroud" no eixo que fique estatico___i
     def redraw_window():
         WIN.blit(BG, (0,0))
+        #draw text  
+        life_label = main_font.render(f"Vida: {life}",1,(255,255,255))
+        level_label = main_font.render(f"Level: {level",1,(255,255,255))
+
+        WIN.blit(life_lebel, (10,10))
+        WIN.blit(level_lebel, (WIDTH - level_label.get_width() - 10,10))
         
         pygame.display.update()
     #______________________________________________________________________l
