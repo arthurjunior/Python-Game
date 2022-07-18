@@ -30,6 +30,15 @@ YELLOW_SPACE_LASER = pygame.image.load(os.path.join("assets","pixel_laser_yellow
 #BACKGROUD
 BG = pygame.transform.scale(pygame.image.load(os.path.join("assets","background-black.png")),(WIDTH, HEIGHT))
 
+class Ship:
+    def _init_(self, x, y, health = 100):
+        self.x = x
+        self.y = yself.health = health
+        self.ship_img = None
+        self.lase_img = None
+        self.lasers = []
+        self.cool_down_counter = 0
+
 #Looping de verificação de de quadros "FPS" e opção de sair
 #declarando variais do game
 def main():
@@ -44,7 +53,7 @@ def main():
     # estabilazndo o plano de fundo "backgroud" no eixo que fique estatico___i
     def redraw_window():
         WIN.blit(BG, (0,0))
-        #draw text  
+        #draw text player status 
         life_label = main_font.render(f"Vida: {life}",1,(255,255,255))
         level_label = main_font.render(f"Level: {level",1,(255,255,255))
 
